@@ -1,0 +1,7 @@
+# Main Commands
+
+> `current-load`
+
+Returns the currently loaded save name (main characters name)
+
+## Loading
