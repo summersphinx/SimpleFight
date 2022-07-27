@@ -26,7 +26,7 @@ Continues to the next fight.
 
 > items [*type*]
 
-Returns a list of every item you currently have in your inventory. If *type* is given, sort for items with the specified tag. Tags are listed [here](https://github.com/summersphinx/SimpleFight/blob/master/docs/tags.txt).
+Returns a list of every item you currently have in your inventory. If *type* is given, sort for items with the specified tag. Tags are listed [here](https://github.com/summersphinx/SimpleFight/blob/master/tags.txt).
 
 > use *item*
 
