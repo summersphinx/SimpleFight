@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="General" href="general.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="&lt;no title&gt;" href="general.html" />
 
     <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>Main Commands - SimpleFight documentation</title>
+        <title>&lt;no title&gt; - SimpleFight documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -154,12 +154,7 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Main Commands</a></li>
-</ul>
-
+  
 </div>
 </div>
 
@@ -185,65 +180,37 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="main-commands">
-<h1>Main Commands<a class="headerlink" href="#main-commands" title="Permalink to this heading">#</a></h1>
-<blockquote>
-<div><p>help</p>
-</div></blockquote>
+          <p># Main Commands</p>
+<p>&gt; help</p>
 <p>Opens this Documentation in a browser.</p>
-<section id="loading">
-<h2>Loading<a class="headerlink" href="#loading" title="Permalink to this heading">#</a></h2>
-<blockquote>
-<div><p>load [<em>save name</em>]</p>
-</div></blockquote>
+<p>## Loading</p>
+<p>&gt; load [<em>save name</em>]</p>
 <p>Loads a different valid save if <em>save name</em> is given. If <em>save name</em> is not given, returns a list of all available saves.</p>
-<blockquote>
-<div><p>current-load</p>
-</div></blockquote>
+<p>&gt; current-load</p>
 <p>Returns the currently loaded save name (main characters name)</p>
-<blockquote>
-<div><p>start-load</p>
-</div></blockquote>
+<p>&gt; start-load</p>
 <p>Starts the currently loaded game.</p>
-</section>
-<section id="general-in-game">
-<h2>General In-game<a class="headerlink" href="#general-in-game" title="Permalink to this heading">#</a></h2>
-<blockquote>
-<div><p>continue, cont</p>
-</div></blockquote>
+<p>## General In-game</p>
+<p>&gt; continue, cont</p>
 <p>Continues to the next fight.</p>
-<blockquote>
-<div><p>items [<em>type</em>]</p>
-</div></blockquote>
-<p>Returns a list of every item you currently have in your inventory. If <em>type</em> is given, sort for items with the specified tag. Tags are listed <a class="reference external" href="https://github.com/summersphinx/SimpleFight/blob/master/docs/tags.txt">here</a>.</p>
-<blockquote>
-<div><p>use <em>item</em></p>
-</div></blockquote>
+<p>&gt; items [<em>type</em>]</p>
+<p>Returns a list of every item you currently have in your inventory. If <em>type</em> is given, sort for items with the specified tag. Tags are listed [here](<a class="reference external" href="https://github.com/summersphinx/SimpleFight/blob/master/tags.txt">https://github.com/summersphinx/SimpleFight/blob/master/tags.txt</a>).</p>
+<p>&gt; use <em>item</em></p>
 <p>Use an item if that item is available.</p>
-<blockquote>
-<div><p>save</p>
-</div></blockquote>
+<p>&gt; save</p>
 <p>Saves the current game. By default, the game will auto save after every fight. Disable this with the setting GUI.</p>
-<blockquote>
-<div><p>settings</p>
-</div></blockquote>
+<p>&gt; settings</p>
 <p>Opens the settings for the entire game. This will not control save specific settings.</p>
-<blockquote>
-<div><p>settings-save</p>
-</div></blockquote>
+<p>&gt; settings-save</p>
 <p>Opens the settings for the individual save. This will not affect the general settings of the game.</p>
-<blockquote>
-<div><p>quit</p>
-</div></blockquote>
+<p>&gt; quit</p>
 <p>Quits the game. This will only quit the game. ==Any unsaved progress will be lost!==</p>
-</section>
-</section>
 
         </article>
       </div>
@@ -258,7 +225,7 @@
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">General</div>
+                <div class="title">&lt;no title&gt;</div>
                 
               </div>
             </a>
@@ -282,28 +249,8 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Main Commands</a><ul>
-<li><a class="reference internal" href="#loading">Loading</a></li>
-<li><a class="reference internal" href="#general-in-game">General In-game</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
