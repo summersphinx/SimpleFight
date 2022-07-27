@@ -32,6 +32,10 @@ Returns a list of every item you currently have in your inventory. If *type* is 
 
 Use an item if that item is available.
 
+> trade
+
+Opens dialogue to potentially trade. See [Trading](trade.md) for useful information, as well as usable commands.
+
 > save
 
 Saves the current game. By default, the game will auto save after every fight. Disable this with the setting GUI.
@@ -46,4 +50,7 @@ Opens the settings for the individual save. This will not affect the general set
 
 > quit
 
-Quits the game. This will only quit the game. ==Any unsaved progress will be lost!==
+Quits the game. This will only quit the game.
+```{warning}
+Any unsaved progress will be lost!
+```
