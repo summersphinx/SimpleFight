@@ -10,8 +10,8 @@ Welcome to SimpleFight's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   general
-   main
+   general.md
+   main.md
 
 
 
