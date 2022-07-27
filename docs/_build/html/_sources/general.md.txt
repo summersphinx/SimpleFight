@@ -8,7 +8,7 @@ General Commands for starting the game, along with customizable options if you c
 
 ### Installing
 
-If you have already installed SimpleFight, then skip to the next section. Installing SimpleFight is as simple as [Downloading]() and executing the .msi or .exe file.
+If you have already installed SimpleFight, then skip to the next section. Installing SimpleFight is as simple as [Downloading](https://summersphinx.itch.io/simplefight) and executing the .msi or .exe file.
 
 ### Playing
 
