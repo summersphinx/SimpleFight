@@ -1,8 +1,14 @@
 # Main Commands
 
-> help
+> help [*command*]
 
 Opens this Documentation in a browser.
+
+command
+
+: Optional: Shows the specified command use cases in documentation.
+
+---
 
 ## Loading
 
@@ -18,49 +24,37 @@ Returns the currently loaded save name (main characters name)
 
 Starts the currently loaded game.
 
+---
+
 ## General In-game
 
 > continue, cont
 
 Continues to the next fight.
 
----
-
 > items [*type*]
 
 Returns a list of every item you currently have in your inventory. If *type* is given, sort for items with the specified tag. Tags are listed [here](https://github.com/summersphinx/SimpleFight/blob/master/tags.txt).
-
----
 
 > use *item*
 
 Use an item if that item is available.
 
----
-
 > trade
 
 Opens dialogue to potentially trade. See [Trading](trade.md) for useful information, as well as usable commands.
-
----
 
 > save
 
 Saves the current game. By default, the game will auto save after every fight. Disable this with the setting GUI.
 
----
-
 > settings
 
 Opens the settings for the entire game. This will not control save specific settings.
 
----
-
 > settings-save
 
 Opens the settings for the individual save. This will not affect the general settings of the game.
-
----
 
 > quit
 
