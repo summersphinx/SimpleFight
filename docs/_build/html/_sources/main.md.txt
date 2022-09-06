@@ -32,9 +32,13 @@ Starts the currently loaded game.
 
 Continues to the next fight.
 
-> items [*type*]
+> items [*type*] [*name*]
 
-Returns a list of every item you currently have in your inventory. If *type* is given, sort for items with the specified tag. Tags are listed [here](https://github.com/summersphinx/SimpleFight/blob/master/tags.txt).
+Returns a list of every item you currently have in your inventory. If *type* is given, sort for items with the specified tag. Tags are listed [here](https://github.com/summersphinx/SimpleFight/blob/master/tags.txt). If *name* is given, sort for items with the given name.
+
+```none
+items type=melee name=dagger
+```
 
 > use *item*
 

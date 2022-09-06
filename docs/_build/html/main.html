@@ -159,6 +159,7 @@
 <li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Main Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trade.html">Trading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="combat.html">Combat</a></li>
 </ul>
 
 </div>
@@ -224,9 +225,12 @@
 </div></blockquote>
 <p>Continues to the next fight.</p>
 <blockquote>
-<div><p>items [<em>type</em>]</p>
+<div><p>items [<em>type</em>] [<em>name</em>]</p>
 </div></blockquote>
-<p>Returns a list of every item you currently have in your inventory. If <em>type</em> is given, sort for items with the specified tag. Tags are listed <a class="reference external" href="https://github.com/summersphinx/SimpleFight/blob/master/tags.txt">here</a>.</p>
+<p>Returns a list of every item you currently have in your inventory. If <em>type</em> is given, sort for items with the specified tag. Tags are listed <a class="reference external" href="https://github.com/summersphinx/SimpleFight/blob/master/tags.txt">here</a>. If <em>name</em> is given, sort for items with the given name.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>items type=melee name=dagger
+</pre></div>
+</div>
 <blockquote>
 <div><p>use <em>item</em></p>
 </div></blockquote>

@@ -2,10 +2,12 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Trading" href="trade.html" />
 
-    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/><title>Index - SimpleFight documentation</title>
-<link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>Combat - SimpleFight documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
@@ -132,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -153,11 +155,11 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="general.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main.html">Main Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="trade.html">Trading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="combat.html">Combat</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Combat</a></li>
 </ul>
 
 </div>
@@ -185,16 +187,60 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          
-<section class="genindex-section">
-  <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"></div>
+          <section id="combat">
+<h1>Combat<a class="headerlink" href="#combat" title="Permalink to this heading">#</a></h1>
+<p>Combat is signified by the red background on the dialogue screen. The combat state will always load during any encounter.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Saving during combat is not allowed! Ensure either autosaves are enabled, or you have saved before entering combat to ensure you do not lose any progress.</p>
+</div>
+<section id="stats">
+<h2>Stats<a class="headerlink" href="#stats" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>me</p>
+</div></blockquote>
+<p>Returns your player health, mana, and any status effects currently applied to you.</p>
+<blockquote>
+<div><p>enemy [<em>ID</em>]</p>
+</div></blockquote>
+<p>Returns a guess of enemy health, mana, and potential status effects. If <em>ID</em> is given, returns stats for that enemy.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Status effects you have put on the enemy will be listed as potential effects.</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><em>ID</em>’s start at 0.</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p><em>ID</em> will only work when facing multiple enemies. Will error if facing only one enemy.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><em>ID</em> of enemies will change when an enemy is killed if there is an enemy with a higher <em>ID</em>.</p>
+</div>
+<blockquote>
+<div><p>items [<em>type</em>] [<em>name</em>]</p>
+</div></blockquote>
+<p>Returns a list of every item you currently have in your inventory. If <em>type</em> is given, sort for items with the specified tag. Tags are listed <a class="reference external" href="https://github.com/summersphinx/SimpleFight/blob/master/tags.md">here</a>. If <em>name</em> is given, sort for items with the given name.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>items type=melee name=dagger
+</pre></div>
+</div>
+</section>
+<section id="attacking">
+<h2>Attacking<a class="headerlink" href="#attacking" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>atk, attack <em>weapon</em> <em>ID</em></p>
+</div></blockquote>
+<p>Attacks the specified target with the specified weapon. Target is identified with <em>ID</em>, while <em>weapon</em> is the item name. If you have multiple of one weapon selected, the first to be found will be used. Avoid this by renaming weapons, merging weapons[WIP], or selling old weapons at traders.</p>
+</section>
 </section>
 
         </article>
@@ -203,7 +249,17 @@
         
         <div class="related-pages">
           
-          
+          <a class="prev-page" href="trade.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Trading</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -224,8 +280,28 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Combat</a><ul>
+<li><a class="reference internal" href="#stats">Stats</a></li>
+<li><a class="reference internal" href="#attacking">Attacking</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
