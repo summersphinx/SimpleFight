@@ -13,6 +13,7 @@ Welcome to SimpleFight's documentation!
    general.md
    main.md
    trade.md
+   combat.md
 
 
 
