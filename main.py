@@ -2,7 +2,6 @@ import os
 import PySimpleGUI as sg
 import time
 import webbrowser
-import keyboard as k
 
 import Hero
 
@@ -21,6 +20,7 @@ layout = [
 ]
 
 wn = sg.Window('SimpleFight', layout, finalize=True, font="Arial 12")
+wn['input'].bind("<Return>", "_Enter")
 
 sg.cprint_set_output_destination(wn, 'log')
 
@@ -34,26 +34,16 @@ for i in [['SimpleFight', '#1E90FF', '20'], ['By: Summersphinx', '#800000', '14'
 mode = 'main'
 
 
-def input():
-    new = ''
-    wn['input'].Update(disabled=False)
-    wn['input'].update(value='')
-    wn['input'].set_focus(True)
-
-    while True:
-        # Wait for the next event.
-        event = k.read_event()
-        if event.event_type == k.KEY_DOWN and event.name == 'enter':
-            wn['input'].Update(disabled=True)
-            break
-        else:
-            wn.refresh()
-
-
 if __name__ == '__main__':
     while True:
         print('next')
-        input()
+        wn['input'].Update(disabled=False)
+        wn['input'].update(value='')
+        wn['input'].set_focus(True)
+        while True:
+            event, values = wn.read()
+            if event == "input" + "_Enter" or sg.WIN_CLOSED:
+                break
 
         user = wn['input'].get()
 
@@ -70,3 +60,5 @@ if __name__ == '__main__':
         elif user == 'start':
             sg.cprint('You:     HP [{hp}]   MP [{mp}]\nEnemy:   HP [{ehp}]    MP [{emp}]'.format(hp=Hero.Stats.hp[0],
                                                                                                  mp=Hero.Stats.mp[0]))
+        else:
+            sg.cprint('Invalid command. Type help for more commands.')
