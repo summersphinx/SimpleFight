@@ -1,3 +1,4 @@
+data,value
 version,0.1.0
 modded,no
 played,0
@@ -11,3 +12,9 @@ armour,"{'helmet': ""Knight's Helm"", 'chest-plate': ""Knight's Chest-plate"", '
 hands,"{'left': None, 'right': 'Iron Sword'}"
 magic,{}
 throwables,{}
+rightHand,Iron Sword
+leftHand,empty
+Helmet,
+Chestplate,Leather Cloak
+Leggings,
+Boots,

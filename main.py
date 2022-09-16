@@ -2,13 +2,23 @@ import os
 import PySimpleGUI as sg
 import time
 import webbrowser
+import sys
 
 import Hero
 
-url1 = 'https://simplefight.readthedocs.io/en/latest/'  # Link to Docs
-url2 = 'https://www.patreon.com/gemgames2'  # Link to Patreon
-url3 = 'https://summersphinx.itch.io/simplefight'  # Link to Itch.io page
-url4 = 'https://gamegames.nicepage.io'  # Link to Website
+# URLS
+
+url_docs = 'https://simplefight.readthedocs.io/en/latest/'  # Link to Docs
+url_patreon = 'https://www.patreon.com/gemgames2'  # Link to Patreon
+url_itch = 'https://summersphinx.itch.io/simplefight'  # Link to Itch.io page
+url_home = 'https://gamegames.nicepage.io'  # Link to Website
+
+# Get Local File Path
+
+if sys.platform == 'win32':
+    path = os.getenv('LOCALAPPDATA') + '/GEM Games/SimpleFight/'
+else:
+    path = ''
 
 # Game Code
 
@@ -45,20 +55,27 @@ if __name__ == '__main__':
             if event == "input" + "_Enter" or sg.WIN_CLOSED:
                 break
 
-        user = wn['input'].get()
+        user = wn['input'].get().lower().split(' ')
 
-        if user.lower() in ['quit', 'q'] or sg.WIN_CLOSED:
+        if user[0] in ['quit', 'q'] or sg.WIN_CLOSED:
             wn.close()
             break
 
-        elif user == 'help':
-            webbrowser.open(url1)
+        elif user[0] == 'help':
+            webbrowser.open(url_docs)
 
-        elif user == 'patreon':
-            webbrowser.open(url2)
+        elif user[0] == 'patreon':
+            webbrowser.open(url_patreon)
 
-        elif user == 'start':
-            sg.cprint('You:     HP [{hp}]   MP [{mp}]\nEnemy:   HP [{ehp}]    MP [{emp}]'.format(hp=Hero.Stats.hp[0],
-                                                                                                 mp=Hero.Stats.mp[0]))
+        if mode == 'main':
+
+            if user[0] == 'start':
+                hero = Hero.Hero(path)
+                sg.cprint(hero.hp, t='red')
+
+            if user[0] == 'config':
+                pass
+            if user[0] == 'data':
+                pass
         else:
             sg.cprint('Invalid command. Type help for more commands.')
