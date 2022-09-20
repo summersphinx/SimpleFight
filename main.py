@@ -3,6 +3,7 @@ import PySimpleGUI as sg
 import time
 import webbrowser
 import sys
+import logging
 
 import Hero
 
@@ -19,6 +20,10 @@ if sys.platform == 'win32':
     path = os.getenv('LOCALAPPDATA') + '/GEM Games/SimpleFight/'
 else:
     path = ''
+
+# Set Up Logging
+
+logging.basicConfig(filename=f'{path}log.txt', format='[%(asctime)s]  %(message)s', level=logging.DEBUG)
 
 # Game Code
 
@@ -46,16 +51,19 @@ mode = 'main'
 
 if __name__ == '__main__':
     while True:
-        print('next')
+        logging.info('WAITING FOR NEXT ENTER')
         wn['input'].Update(disabled=False)
         wn['input'].update(value='')
         wn['input'].set_focus(True)
         while True:
             event, values = wn.read()
+
             if event == "input" + "_Enter" or sg.WIN_CLOSED:
                 break
 
         user = wn['input'].get().lower().split(' ')
+
+        logging.info(f'{user} was entered')
 
         if user[0] in ['quit', 'q'] or sg.WIN_CLOSED:
             wn.close()
@@ -79,3 +87,5 @@ if __name__ == '__main__':
                 pass
         else:
             sg.cprint('Invalid command. Type help for more commands.')
+
+logging.info('Program Closed')
