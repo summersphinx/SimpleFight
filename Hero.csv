@@ -1,20 +1,14 @@
-data,value
+type,value
 version,0.1.0
 modded,no
 played,0
 HP,100
 maxHP,100
-mp,10
+MP,10
 maxMP,100
 gold,500
 carry,80
 armour,"{'helmet': ""Knight's Helm"", 'chest-plate': ""Knight's Chest-plate"", 'leggings': ""Knight's Leggings"", 'boots': ""Knight's Boots""}"
 hands,"{'left': None, 'right': 'Iron Sword'}"
 magic,{}
-throwables,{}
-rightHand,Iron Sword
-leftHand,empty
-Helmet,None
-Chestplate,Leather Cloak
-Leggings,None
-Boots,None
+inventory,{}
