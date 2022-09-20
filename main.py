@@ -4,8 +4,12 @@ import time
 import webbrowser
 import sys
 import logging
+import pandas
+
+from tabulate import tabulate
 
 import Hero
+import Enemy
 
 # URLS
 
@@ -43,11 +47,10 @@ sg.cprint_set_output_destination(wn, 'log')
 
 for i in [['SimpleFight', '#1E90FF', '20'], ['By: Summersphinx', '#800000', '14'], ['', 'white', '15'],
           ["Type 'help' for information to start!", 'white', '12']]:
-    time.sleep(1.5)
+    time.sleep(0)
     sg.cprint(i[0], t=i[1], font="Arial {} bold".format(i[2]))
 
 mode = 'main'
-
 
 if __name__ == '__main__':
     while True:
@@ -79,10 +82,15 @@ if __name__ == '__main__':
 
             if user[0] == 'start':
                 hero = Hero.Hero(path)
+
                 sg.cprint(hero.hp, t='red')
 
             if user[0] == 'config':
-                pass
+                sg.cprint(Hero.Hero(path).config)
+                for i in ['plain', 'simple', 'github', 'grid', 'fancy_grid', 'pipe', 'orgtbl', 'jira', 'presto', 'pretty', 'psql', 'rst']:
+                    sg.cprint(i)
+                    sg.cprint(tabulate(pandas.read_csv('https://raw.githubusercontent.com/summersphinx/SimpleFight/master/Hero.csv'), ))
+                print(Hero.Hero(path).config.to_csv)
             if user[0] == 'data':
                 pass
         else:
